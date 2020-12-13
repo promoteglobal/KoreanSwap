@@ -1,3 +1,7 @@
+#knownSentences, #unknownSentences, #shuffleEverything {
+  float:left;
+}
+
 #hello, #please, #imPerson, #imTeacher, #imWoman, #thankyou, #thatsBed, #thatsCar, #thatsTable, #thatsTree, #thatsDoctor {
   display: none;
 }
