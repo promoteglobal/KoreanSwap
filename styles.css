@@ -1,5 +1,7 @@
 #knownSentences, #unknownSentences, #shuffleEverything {
   float:left;
+  border: 3px black solid;
+  margin: 5px;
 }
 
 #hello, #please, #imPerson, #imTeacher, #imWoman, #thankyou, #thatsBed, #thatsCar, #thatsTable, #thatsTree, #thatsDoctor {
