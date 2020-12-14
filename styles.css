@@ -4,11 +4,3 @@
   margin: 5px;
 }
 
-#hello, #please, #imPerson, #imTeacher, #imWoman, #thankyou, #thatsBed, #thatsCar, #thatsTable, #thatsTree, #thatsDoctor {
-  display: none;
-}
-
-/*-----------------------------------Makeyourownpics-----------------------------------------*/
-#thisKorea, #thisHouse, #thatName, #thatChair, #thisBook, #thisComputer, #thisSofa, #thatChina, #thisJapan, #thatDoor, #thisStudent, #wordYes, #wordNo {
-  display: none;
-}
