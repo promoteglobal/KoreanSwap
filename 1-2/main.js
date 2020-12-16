@@ -70,7 +70,7 @@ function makeAllPicsNone (images) {
   
 }
 
-const KnownSentencesLine = document.getElementById("KnownSentencesLine");
+const knownSentencesLine = document.getElementById("knownSentencesLine");
 // const createYourOwnSentencesLine = document.getElementById("NewVocabPics");
 // const createallchap1Line = document.getElementById("AllVocabsPics1.1");
 
@@ -85,7 +85,7 @@ function mixKnownSentencesPicFirstPic () {
 function mixKnownSentencesPrintLine () {
   makeAllPicsNone (knownpics);  //put back knownpicsAndUnknownpics where knownpics is.
   const knownSentencesFirstPic = mixKnownSentencesPicFirstPic();
-  KnownSentencesLine.innerHTML = "";
+  knownSentencesLine.innerHTML = "";
   knownSentencesFirstPic.style.display = "block";
 
 
