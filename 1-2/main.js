@@ -17,23 +17,22 @@ const knownpics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, 
 
 //--------------------------------------------------------createYourOwnSentences---------------------------------------------------------------------
 
-// const thisKoreaPic = document.getElementById("thisKorea");
-// const thisHousePic = document.getElementById("thisHouse");
-// const thatNamePic = document.getElementById("thatName");
-// const thatChairPic = document.getElementById("thatChair");
-// const thisBookPic = document.getElementById("thisBook");
-// const thisComputerPic = document.getElementById("thisComputer");
-// const thisSofaPic = document.getElementById("thisSofa");
-// const thatChinaPic = document.getElementById("thatChina");
-// const thisJapanPic = document.getElementById("thisJapan");
-// const thatDoorPic = document.getElementById("thatDoor");
-// const thisStudentPic = document.getElementById("thisStudent");
-// const wordYestPic = document.getElementById("wordYes");
-// const wordNoPic = document.getElementById("wordNo");
-// const createYourOwnSentencesArray = [thisKoreaPic, thisHousePic, thatNamePic, thatChairPic, thisBookPic, thisComputerPic, thisSofaPic, thatChinaPic, thisJapanPic, thatDoorPic, thisStudentPic, wordYestPic, wordNoPic];
+const pic14 = document.getElementById("pic14");
+const pic15 = document.getElementById("pic15");
+const pic16 = document.getElementById("pic16");
+const pic17 = document.getElementById("pic17");
+const pic18 = document.getElementById("pic18");
+const pic19 = document.getElementById("pic19");
+const pic20 = document.getElementById("pic20");
+const pic21 = document.getElementById("pic21");
+const pic22 = document.getElementById("pic22");
+const pic23 = document.getElementById("pic23");
+const pic24 = document.getElementById("pic24");
+
+const unknownPics = [pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24];
 
 //-------------------------------------------------------------Shufflebothsetsofpics---------------------------------------------------------
-// const knownpicsAndUnknownpics = [...knownpics, ...createYourOwnSentencesArray];
+const knownpicsAndUnknownpics = [...knownpics, ...unknownPics];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -51,8 +50,8 @@ function shuffle(array) {
 }
 
 const knownPicsShuffled = shuffle(knownpics);
-// const createYourOwnSentencesShuffled = shuffle(createYourOwnSentencesArray);
-// const shufflealllesson1Shuffled = shuffle(knownpicsAndUnknownpics);
+const unknownPicsShuffled = shuffle(unknownPics);
+const allPicsShuffled = shuffle(knownpicsAndUnknownpics);
 
 
 
@@ -71,8 +70,8 @@ function makeAllPicsNone (images) {
 }
 
 const knownSentencesLine = document.getElementById("knownSentencesLine");
-// const createYourOwnSentencesLine = document.getElementById("NewVocabPics");
-// const createallchap1Line = document.getElementById("AllVocabsPics1.1");
+const unknownSentencesLine = document.getElementById("unknownSentencesLine");
+const allSentencesLine = document.getElementById("allSentencesLine");
 
 
 //----------------------------------------------------------mix all known sentences photos----------------------------------------------------------
@@ -83,7 +82,7 @@ function mixKnownSentencesPicFirstPic () {
 
 
 function mixKnownSentencesPrintLine () {
-  makeAllPicsNone (knownpics);  //put back knownpicsAndUnknownpics where knownpics is.
+  makeAllPicsNone (knownpicsAndUnknownpics);  //put back knownpicsAndUnknownpics where knownpics is.
   const knownSentencesFirstPic = mixKnownSentencesPicFirstPic();
   knownSentencesLine.innerHTML = "";
   knownSentencesFirstPic.style.display = "block";
@@ -94,43 +93,43 @@ function mixKnownSentencesPrintLine () {
   
 
 //---------------------------------------------------------------mix all new sentences-------------------------------------------------------------------------
-// function mixphotosCreateOwnfunction () {
-//   const firstChoiceCreatedPiced = createYourOwnSentencesShuffled[0];
-//   return firstChoiceCreatedPiced;
-// }
+function mixUnknownSentencesPicFirstPic () {
+  const unknownSentencesFirstPic = unknownPicsShuffled[0];
+  return unknownSentencesFirstPic;
+}
 
 
-// function mixphotosCreatePrintLine () {
-//   makeAllPicsNone (knownpicsAndUnknownpics);
-//   const firstChoiceCreatedPiced = mixphotosCreateOwnfunction();
-//   createYourOwnSentencesLine.innerHTML = "";
-//   firstChoiceCreatedPiced.style.display = "block";
+function mixUnknownSentencesPrintLine () {
+  makeAllPicsNone (knownpicsAndUnknownpics);
+  const unknownSentencesFirstPic = mixUnknownSentencesPicFirstPic();
+  unknownSentencesLine.innerHTML = "";
+  unknownSentencesFirstPic.style.display = "block";
 
 
-//   shuffleTheFunctions([createYourOwnSentencesArray]);
-// }
+  shuffleTheFunctions([unknownPics]);
+}
 
 
 //---------------------------------------------------------------mix all chap 1 sentences-------------------------------------------------
-// function mixallphotosfunction () {
-//   const firstChoiceCreatedPiced = shufflealllesson1Shuffled[0];
-//   return firstChoiceCreatedPiced;
-// }
+function mixAllSentencesPicFirstPic () {
+  const allSentencesFirstPic = allPicsShuffled[0];
+  return allSentencesFirstPic;
+}
 
 
-// function mixallchap1PrintLine () {
-//   makeAllPicsNone (knownpicsAndUnknownpics);
-//   const firstChoiceCreatedPiced = mixallphotosfunction();
-//   createallchap1Line.innerHTML = "";
-//   firstChoiceCreatedPiced.style.display = "block";
+function mixallSentencesPrintLine () {
+  makeAllPicsNone (knownpicsAndUnknownpics);
+  const allSentencesFirstPic = mixAllSentencesPicFirstPic();
+  allSentencesLine.innerHTML = "";
+  allSentencesFirstPic.style.display = "block";
 
 
-//   shuffleTheFunctions([knownpicsAndUnknownpics]);
-// }
+  shuffleTheFunctions([knownpicsAndUnknownpics]);
+}
 //--------------------------------------------------------------add event listeners to buttons-------------------------------------------
 const mixKnownSentencesButton = document.getElementById("mixKnownSentencesbutton").addEventListener("click", mixKnownSentencesPrintLine ); 
-// const imageShuffleCreateButton = document.getElementById("newVocabPics").addEventListener("click", mixphotosCreatePrintLine ); 
-// const allVocabPicsChap1Button = document.getElementById("allVocabsPics1.1").addEventListener("click", mixallchap1PrintLine ); 
+const mixUnknownSentencesButton = document.getElementById("mixUnknownSentencesbutton").addEventListener("click", mixUnknownSentencesPrintLine ); 
+const allSentencesButton = document.getElementById("allSentencesbutton").addEventListener("click", mixallSentencesPrintLine ); 
 
 //-------------------------------------------------------------------chap2--------------------------------------------------------------------------------
 
