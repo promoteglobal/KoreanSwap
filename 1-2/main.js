@@ -5,7 +5,6 @@ const pic2 = document.getElementById("pic2");
 const pic3 = document.getElementById("pic3");
 const pic4 = document.getElementById("pic4");
 const pic5 = document.getElementById("pic5");
-const pic6 = document.getElementById("pic6");
 const pic7 = document.getElementById("pic7");
 const pic8 = document.getElementById("pic8");
 const pic9 = document.getElementById("pic9");
@@ -13,10 +12,12 @@ const pic10 = document.getElementById("pic10");
 const pic11 = document.getElementById("pic11");
 const pic12 = document.getElementById("pic12");
 const pic13 = document.getElementById("pic13");
-const knownpics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13];
+const pic13 = document.getElementById("pic25");
+const knownpics = [pic1, pic2, pic3, pic4, pic5, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic25];
 
 //--------------------------------------------------------createYourOwnSentences---------------------------------------------------------------------
 
+const pic6 = document.getElementById("pic6");
 const pic14 = document.getElementById("pic14");
 const pic15 = document.getElementById("pic15");
 const pic16 = document.getElementById("pic16");
@@ -29,7 +30,7 @@ const pic22 = document.getElementById("pic22");
 const pic23 = document.getElementById("pic23");
 const pic24 = document.getElementById("pic24");
 
-const unknownPics = [pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24];
+const unknownPics = [pic6, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24];
 
 //-------------------------------------------------------------Shufflebothsetsofpics---------------------------------------------------------
 const knownpicsAndUnknownpics = [...knownpics, ...unknownPics];
