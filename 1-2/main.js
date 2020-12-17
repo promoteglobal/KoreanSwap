@@ -12,7 +12,7 @@ const pic10 = document.getElementById("pic10");
 const pic11 = document.getElementById("pic11");
 const pic12 = document.getElementById("pic12");
 const pic13 = document.getElementById("pic13");
-const pic13 = document.getElementById("pic25");
+const pic25 = document.getElementById("pic25");
 const knownpics = [pic1, pic2, pic3, pic4, pic5, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic25];
 
 //--------------------------------------------------------createYourOwnSentences---------------------------------------------------------------------
